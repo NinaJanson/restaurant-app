@@ -1,0 +1,60 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "McHappy",
+      "rating": 3,
+      "diet": { "vegan": true, "veggie": true, "meat": false },
+      "address": { "streetAddress": "abc-street 4", "city": "12345 Hamburg" }
+    },
+    {
+      "id": 2,
+      "name": "Chilly Chill",
+      "rating": 2,
+      "diet": { "vegan": false, "veggie": true, "meat": true },
+      "address": { "streetAddress": "On the road 104", "city": "12345 Hamburg" }
+    },
+    {
+      "id": 3,
+      "name": "Cheesy King",
+      "rating": 4.5,
+      "diet": { "vegan": true, "veggie": true, "meat": true },
+      "address": { "streetAddress": "My Lady 52", "city": "12345 Hamburg" }
+    },
+    {
+      "id": 4,
+      "name": "Best of Burger",
+      "rating": 1,
+      "diet": { "vegan": false, "veggie": false, "meat": true },
+      "address": { "streetAddress": "Highway 66", "city": "12345 Hamburg" }
+    },
+    {
+      "id": 5,
+      "name": "Burger Palace",
+      "rating": 4.5,
+      "diet": { "vegan": true, "veggie": true, "meat": true },
+      "address": { "streetAddress": "Angel Street 1", "city": "12345 Hamburg" }
+    },
+    {
+      "id": 6,
+      "name": "Burgisimo",
+      "rating": 3.5,
+      "diet": { "vegan": true, "veggie": true, "meat": true },
+      "address": { "streetAddress": "My Lady 52", "city": "12345 Hamburg" }
+    },
+    {
+      "id": 7,
+      "name": "Vegan Bun",
+      "rating": 5,
+      "diet": { "vegan": true, "veggie": false, "meat": false },
+      "address": { "streetAddress": "Highway 66", "city": "12345 Hamburg" }
+    },
+    {
+      "id": 8,
+      "name": "Spicy Planet",
+      "rating": 3.5,
+      "diet": { "vegan": true, "veggie": true, "meat": true },
+      "address": { "streetAddress": "Angel Street 1", "city": "12345 Hamburg" }
+    }
+  ]
+}
