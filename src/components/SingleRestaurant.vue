@@ -1,11 +1,14 @@
 <template>
   <ul>
-    <li>
-      <p>{{ restaurantName }}</p>
+    <li class="list">
+      <p class="restaurant-name">{{ restaurantName }}</p>
+
       <StarList :rating="rating" />
       <MenuOptions :diet="diet" />
-      <IconButton @clicked="clickHandler" :buttonContent="toggleHeart" />
-      <IconButton @clicked="toggleModal" :buttonContent="'🌍'" />
+      <div class="button-container">
+        <IconButton @clicked="clickHandler" :buttonContent="toggleHeart" />
+        <IconButton @clicked="toggleModal" :buttonContent="'🌍'" />
+      </div>
       <ModalAddress v-if="modalActive" @closeModal="toggleModal">
         <address>
           {{ restaurantName }} <br />
@@ -69,7 +72,27 @@ export default {
 </script>
 
 <style scoped>
-li {
+ul {
+  all: unset;
+}
+.list {
   border: black solid 2px;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: auto 1fr;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+
+.restaurant-name {
+  grid-column-start: span 4;
+  text-align: start;
+  font-weight: bold;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
 }
 </style>

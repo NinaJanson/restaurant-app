@@ -1,13 +1,19 @@
 <template>
   <div class="stars">
-    <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span
-    ><span>&#9734;</span><span>&#9734;</span>
-    <div class="stars-filled" :style="{ width: rating * 20 + '%' }">
-      <span>&starf;</span>
-      <span>&starf;</span>
-      <span>&starf;</span>
-      <span>&starf;</span>
-      <span>&starf;</span>
+    <div class="stars-empty">
+      <span>&#9734;</span>
+      <span>&#9734;</span>
+      <span>&#9734;</span>
+      <span>&#9734;</span>
+      <span>&#9734;</span>
+
+      <div class="stars-filled" :style="{ width: rating * 20 + '%' }">
+        <span>&starf;</span>
+        <span>&starf;</span>
+        <span>&starf;</span>
+        <span>&starf;</span>
+        <span>&starf;</span>
+      </div>
     </div>
   </div>
 </template>
@@ -22,11 +28,11 @@ export default {
 </script>
 
 <style scoped>
-.stars {
+.stars .stars-empty {
   position: relative;
   display: inline-block;
   color: yellow;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .stars-filled {

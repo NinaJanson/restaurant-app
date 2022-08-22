@@ -1,7 +1,7 @@
 <template>
-  <ul>
-    <li v-for="menu in Object.entries(diet)" :key="menu[0]">
-      {{ menu[0] }}
+  <ul class="menu-list">
+    <li class="menu-entry" v-for="menu in Object.entries(diet)" :key="menu[0]">
+      <span>{{ menu[0] }}</span>
       <span v-if="menu[1] === true">✔️</span>
       <span v-else>❌</span>
     </li>
@@ -16,3 +16,20 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.menu-list {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.menu-entry {
+  all: unset;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: baseline;
+}
+</style>

@@ -2,10 +2,11 @@
   <transition name="modal-animation">
     <div class="modal">
       <transition name="modal-animation-inner">
-        <div class="modal-content">
+        <details class="modal-content">
+          <summary>See address...</summary>
           <slot />
           <button @click="$emit('closeModal')" class="close-btn">✖️</button>
-        </div>
+        </details>
       </transition>
     </div>
   </transition>
@@ -35,7 +36,7 @@ export default {
   position: relative;
   background: white;
   width: 70vw;
-  height: 30vh;
+  _height: 30vh;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -45,11 +46,20 @@ export default {
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
+summary {
+  _padding: 2rem;
+  margin: 1rem;
+}
 .close-btn {
+  all: unset;
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
   cursor: pointer;
+  border: solid black 1px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2px;
 }
 
 .modal-animation-enter-active,
